@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,100;1,400;1,500;1,600;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cadastrocli.css">
+    <title>Cadastro — Frethe.</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2 class="title">Fre<span>the.</span></h2>
+            <p class="subtitle">Crie sua conta para começar a usar a Frethe.</p>
+
+            <form class="form">
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="nome">Nome</label>
+                        <input class="campo" id="nome" name="nome" type="text" placeholder="Seu nome" required>
+                    </div>
+                    <div class="field">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input class="campo" id="sobrenome" name="sobrenome" type="text" placeholder="Seu sobrenome" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input class="campo" id="email" name="email" type="email" placeholder="seumelhoremail.com.br" required>
+                </div>
+
+                <div class="field">
+                    <label for="telefone">Telefone</label>
+                    <input class="campo" id="telefone" name="telefone" type="tel" placeholder="(86) 9xxxx-xxxx" required>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="cpf">CPF</label>
+                        <input class="campo" id="cpf" name="cpf" type="text" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
+                    </div>
+                    <div class="field">
+                        <label for="nascimento">Data de nascimento</label>
+                        <input class="campo" id="nascimento" name="nascimento" type="date" required>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="senha">Senha</label>
+                        <input class="campo" id="senha" name="senha" type="password" placeholder="••••••••" required>
+                    </div>
+                    <div class="field">
+                        <label for="confirmarSenha">Confirme sua senha</label>
+                        <input class="campo" id="confirmarSenha" name="confirmarSenha" type="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="buttonCriar">CRIAR CONTA</button>
+            </form>
+
+            <p class="login-link">Já tem uma conta? <a href="login.html">Entrar</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frethe. — O que você deseja fazer?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,100;1,400;1,500;1,600;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,900;1,400;1,900&display=swap" rel="stylesheet">
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    color: black;
+    background: #FFFDFB;
+}
+
+/* HEADER — igual ao index.html original */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 24px 14%;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+    transition: all .50s ease;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 900;
+    color: black;
+}
+.logo span{
+    color: rgb(255,99,11);
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    font-size: 16px;
+    color: rgb(255,99,11);
+    margin: 0 22px;
+    font-weight: 600;
+}
+.navlist a:hover{
+    color: black;
+}
+.buttonLg{
+    margin: 0;
+    padding: 12px 30px;
+    background: rgb(255,99,11);
+    border-radius: 3rem;
+}
+.buttonLg a{
+    color: white;
+    font-weight: 600;
+}
+.buttonLg:hover{
+    background: black;
+}
+
+/* MAIN */
+main{
+    padding: 160px 14% 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.stage{
+    width: 100%;
+    max-width: 640px;
+}
+.eyebrow{
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgb(255,99,11);
+    margin-bottom: 16px;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 1.15;
+    color: black;
+    margin-bottom: 14px;
+}
+h1 span{
+    color: rgb(255,99,11);
+}
+.subtitle{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    max-width: 44ch;
+    margin-bottom: 48px;
+}
+
+/* ROTA — assinatura visual: linha tracejada ligando os dois perfis, como um trajeto de entrega */
+.route{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.route::before{
+    content: '';
+    position: absolute;
+    left: 34px;
+    top: 48px;
+    bottom: 48px;
+    border-left: 3px dashed rgba(255,99,11,0.35);
+}
+
+.card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: white;
+    border: 2px solid #EDEAE4;
+    border-radius: 24px;
+    padding: 26px 28px;
+    color: inherit;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03), 0 14px 30px -18px rgba(0,0,0,0.18);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover{
+    transform: translateY(-3px);
+    border-color: rgb(255,99,11);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 22px 40px -18px rgba(255,99,11,0.35);
+}
+.card:focus-visible{
+    outline: 3px solid rgb(255,99,11);
+    outline-offset: 3px;
+}
+
+.icon{
+    position: relative;
+    z-index: 1;
+    flex: none;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(255,99,11,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon svg{ width: 30px; height: 30px; }
+
+.card-body{ flex: 1; min-width: 0; }
+.card-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: black;
+    margin-bottom: 5px;
+}
+.card-desc{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #5a5a5a;
+    margin-bottom: 10px;
+}
+.tag{
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.03em;
+    color: white;
+    background: rgb(255,99,11);
+    padding: 5px 14px;
+    border-radius: 3rem;
+}
+
+.chevron{
+    flex: none;
+    color: #C9C4BB;
+    transition: transform .18s ease, color .18s ease;
+}
+.card:hover .chevron{
+    transform: translateX(4px);
+    color: rgb(255,99,11);
+}
+
+footer{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #7a7a7a;
+    padding: 20px 24px 32px;
+}
+footer a{
+    color: rgb(255,99,11);
+    font-weight: 600;
+}
+footer a:hover{ color: black; }
+
+@media (max-width: 900px){
+    header{ padding: 20px 6%; }
+    main{ padding: 140px 6% 60px; }
+    h1{ font-size: 34px; }
+    .navlist{ display: none; }
+}
+@media (max-width: 480px){
+    .card{ align-items: flex-start; padding: 20px; gap: 14px; }
+    .icon{ width: 52px; height: 52px; }
+    .icon svg{ width: 24px; height: 24px; }
+    .chevron{ display: none; }
+    h1{ font-size: 28px; }
+}
+@media (prefers-reduced-motion: reduce){
+    .card, .chevron{ transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Fre<span>the.</span></a>
+    <nav class="navlist">
+        <a href="#">Quem somos</a>
+        <a href="#">Fretes</a>
+        <a href="#">Fale conosco</a>
+    </nav>
+    <nav class="buttonLg">
+        <a href="login.html">Entrar</a>
+    </nav>
+</header>
+
+<main>
+    <div class="stage">
+        <span class="eyebrow">Teresina · PI</span>
+        <h1>Vamos lá, <span>o que</span> você deseja fazer?</h1>
+        <p class="subtitle">Escolha seu perfil e a gente te leva direto pro lugar certo</p>
+
+        <div class="route">
+            <a href="cadastropres.html" class="card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.5" y="7" width="12" height="9" rx="1.2" stroke="rgb(255,99,11)" stroke-width="1.6"/>
+                        <path d="M13.5 10H16.8C17.2 10 17.55 10.22 17.75 10.56L19.4 13.3C19.5 13.47 19.55 13.66 19.55 13.86V16H13.5V10Z" stroke="rgb(255,99,11)" stroke-width="1.6" stroke-linejoin="round"/>
+                        <circle cx="5.8" cy="17.3" r="1.7" stroke="rgb(255,99,11)" stroke-width="1.6"/>
+                        <circle cx="16.6" cy="17.3" r="1.7" stroke="rgb(255,99,11)" stroke-width="1.6"/>
+                    </svg>
+                </div>
+                <div class="card-body">
+                    <p class="card-title">Sou Motorista</p>
+                    <p class="card-desc">Encontre fretes disponíveis em Teresina e negocie direto com quem precisa transportar carga.</p>
+                    <span class="tag">Começar a trabalhar</span>
+                </div>
+                <svg class="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <a href="cadastrocli.html" class="card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="2.5" width="10" height="17" rx="1" stroke="rgb(255,99,11)" stroke-width="1.6"/>
+                        <path d="M15 9H19.5C20.05 9 20.5 9.45 20.5 10V19.5H15V9Z" stroke="rgb(255,99,11)" stroke-width="1.6"/>
+                        <path d="M8 6H9M8 9H9M8 12H9M11 6H12M11 9H12M11 12H12" stroke="rgb(255,99,11)" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M8 19.5V16.5H12V19.5" stroke="rgb(255,99,11)" stroke-width="1.6"/>
+                    </svg>
+                </div>
+                <div class="card-body">
+                    <p class="card-title">Sou Cliente</p>
+                    <p class="card-desc">Faça seu cadastro e encontre o melhor motorista para a sua necessidade</p>
+                    <span class="tag">Publicar carga</span>
+                </div>
+                <svg class="chevron" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    Precisa de ajuda? <a href="#">Fale conosco</a>
+</footer>
+
+</body>
+</html>

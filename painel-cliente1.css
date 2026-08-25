@@ -1,0 +1,419 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    color: black;
+    background: #FAFAF8;
+}
+
+/* HEADER — mesma base do selecao-perfil.html, adaptado pro usuário logado */
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 20px 6%;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 900;
+    color: black;
+}
+.logo span{ color: rgb(255,99,11); }
+
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.navlist{
+    display: flex;
+    align-items: center;
+}
+.navlist a{
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin: 0 16px;
+    transition: color .2s ease;
+}
+.navlist a.active{ color: rgb(255,99,11); }
+.navlist a:hover{ color: rgb(255,99,11); }
+
+.user-chip{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px 6px 6px;
+    border: 1.5px solid #EDEAE4;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: border-color .2s ease;
+}
+.user-chip:hover{ border-color: rgb(255,99,11); }
+.user-avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgb(255,99,11);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user-name{ font-size: 13.5px; font-weight: 700; color: #1a1a1a; }
+
+/* MAIN */
+main{
+    padding: 122px 6% 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-head{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+.eyebrow{
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgb(255,99,11);
+    margin-bottom: 8px;
+}
+h1{
+    font-weight: 800;
+    font-size: 30px;
+    color: black;
+}
+
+/* TABS estilo pílula */
+.tabs{
+    display: inline-flex;
+    background: #F1EFE9;
+    border-radius: 3rem;
+    padding: 4px;
+    gap: 4px;
+}
+.tab{
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #6b6b6b;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+.tab.is-active{
+    background: rgb(255,99,11);
+    color: white;
+}
+
+/* BUSCA */
+.search{
+    position: relative;
+    margin-bottom: 30px;
+}
+.search svg{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #A9A399;
+}
+.search input{
+    width: 100%;
+    height: 52px;
+    padding: 0 18px 0 48px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+    background: white;
+    border: 1.5px solid #EDEAE4;
+    border-radius: 14px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+.search input::placeholder{ color: #A9A399; }
+.search input:focus{
+    outline: none;
+    border-color: rgb(255,99,11);
+    box-shadow: 0 0 0 3px rgba(255,99,11,0.12);
+}
+
+/* LISTA DE VEÍCULOS */
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vcard{
+    background: white;
+    border: 1.5px solid #EDEAE4;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02), 0 14px 30px -22px rgba(0,0,0,0.15);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.vcard:hover{
+    transform: translateY(-2px);
+    border-color: rgb(255,99,11);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04), 0 22px 40px -20px rgba(255,99,11,0.22);
+}
+
+.vcard-media{
+    position: relative;
+    background: linear-gradient(135deg, #FFB27A 0%, rgb(255,99,11) 60%, #C64E00 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+.vcard-media svg{
+    width: 46%;
+    opacity: .9;
+}
+.vcard-media img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.vcard-media:not(:has(.gallery))::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.18) 1.4px, transparent 1.4px);
+    background-size: 20px 20px;
+}
+
+/* CARROSSEL DE FOTOS — arraste ou deslize para o lado */
+.gallery{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    cursor: grab;
+    user-select: none;
+}
+.gallery::-webkit-scrollbar{ display: none; }
+.gallery.is-dragging{ cursor: grabbing; scroll-snap-type: none; }
+
+.gallery .slide{
+    flex: 0 0 100%;
+    width: 100%;
+    height: auto;
+    scroll-snap-align: start;
+    pointer-events: none; /* evita que o navegador tente "arrastar" a imagem em vez do carrossel */
+}
+
+.gallery-dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    pointer-events: none;
+}
+.gallery-dots span{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    transition: background .2s ease, transform .2s ease;
+}
+.gallery-dots span.is-active{
+    background: #ffffff;
+    transform: scale(1.25);
+}
+
+.gallery-nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20,35,31,0.45);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: background .2s ease, opacity .2s ease;
+}
+.gallery-nav svg{ width: 16px; height: 16px; }
+.gallery-nav--prev{ left: 10px; }
+.gallery-nav--next{ right: 10px; }
+
+.vcard-media:hover .gallery-nav{ opacity: 1; }
+.gallery-nav:hover{ background: rgb(255,99,11); }
+
+.gallery-nav:disabled{
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+@media (hover: none){
+    /* em telas de toque a seta fica sempre visível, já que não existe hover */
+    .gallery-nav{ opacity: 1; }
+}
+
+.badge{
+    position: absolute;
+    top: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 13px;
+    border-radius: 3rem;
+    z-index: 1;
+}
+.badge--type{
+    left: 14px;
+    background: white;
+    color: #1a1a1a;
+}
+.badge--verified{
+    right: 14px;
+    background: #1F8A4C;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.vcard-body{
+    padding: 18px 20px 20px;
+}
+.vcard-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+.vcard-name{
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+.vcard-rating{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+.vcard-rating svg{ width: 14px; height: 14px; }
+
+.vcard-city{
+    font-size: 13px;
+    font-weight: 500;
+    color: #8a8a8a;
+    margin-bottom: 10px;
+}
+
+.vcard-desc{
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #5a5a5a;
+    margin-bottom: 14px;
+}
+
+.vcard-meta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.plate{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: #6b6b6b;
+    background: #F1EFE9;
+    padding: 5px 11px;
+    border-radius: 6px;
+}
+.phone{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+.phone svg{ width: 14px; height: 14px; color: rgb(255,99,11); }
+
+.buttonSolicitar{
+    width: 100%;
+    height: 48px;
+    background: #14231F;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background .25s ease, transform .18s ease;
+}
+.buttonSolicitar:hover{
+    background: rgb(255,99,11);
+    transform: translateY(-2px);
+}
+
+/* PAINEL "MINHAS SOLICITAÇÕES" — vazio por padrão */
+.empty{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+    color: #8a8a8a;
+}
+.empty svg{ width: 56px; height: 56px; margin-bottom: 18px; color: #D8D3C8; }
+.empty p{ font-size: 14px; font-weight: 500; max-width: 34ch; }
+
+@media (max-width: 640px){
+    header{ padding: 16px 5%; }
+    .navlist{ display: none; }
+    .user-name{ display: none; }
+    main{ padding: 96px 5% 60px; }
+    h1{ font-size: 24px; }
+    .page-head{ flex-direction: column; align-items: flex-start; }
+}

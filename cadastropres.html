@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cadastropres.css">
+    <title>Cadastro de Motorista — Frethe.</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card card--wide">
+            <h2 class="title">Fre<span>the.</span></h2>
+            <p class="subtitle">Cadastre-se como motorista parceiro e comece a receber fretes.</p>
+
+            <!-- INDICADOR DE ETAPAS (mesma assinatura de rota tracejada das outras telas) -->
+            <div class="steps">
+                <div class="step is-active" data-step-label="1">
+                    <span class="step-dot">1</span>
+                    <span class="step-name">Dados pessoais</span>
+                </div>
+                <span class="step-line"></span>
+                <div class="step" data-step-label="2">
+                    <span class="step-dot">2</span>
+                    <span class="step-name">Dados do veículo</span>
+                </div>
+            </div>
+
+            <form class="form" id="formPrestador">
+
+                <!-- ETAPA 1 — DADOS PESSOAIS -->
+                <section class="panel" data-panel="1">
+
+                    <div class="field">
+                        <label for="nome">Nome completo</label>
+                        <input class="campo" id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input class="campo" id="email" name="email" type="email" placeholder="seumelhoremail.com.br" required>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input class="campo" id="whatsapp" name="whatsapp" type="tel" placeholder="(86) 9xxxx-xxxx" required>
+                        </div>
+                        <div class="field">
+                            <label for="cpfCnpj">CPF ou CNPJ</label>
+                            <input class="campo" id="cpfCnpj" name="cpf_cnpj" type="text" placeholder="xxx.xxx.xxx-xx" required>
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="senha">Senha</label>
+                            <input class="campo" id="senha" name="senha" type="password" placeholder="••••••••" required>
+                        </div>
+                        <div class="field">
+                            <label for="confirmarSenha">Confirme sua senha</label>
+                            <input class="campo" id="confirmarSenha" name="confirmarSenha" type="password" placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="bio">Sobre você <span class="opcional">(opcional)</span></label>
+                        <textarea class="campo campo--area" id="bio" name="bio" placeholder="Conte um pouco da sua experiência como motorista"></textarea>
+                    </div>
+
+                    <div class="actions">
+                        <button type="button" class="buttonPrimary" data-next="2">Continuar</button>
+                    </div>
+                </section>
+
+                <!-- ETAPA 2 — DADOS DO VEÍCULO -->
+                <section class="panel" data-panel="2" hidden>
+
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="tipoVeiculo">Tipo de veículo</label>
+                            <select class="campo" id="tipoVeiculo" name="tipo_veiculo" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option value="moto">Moto</option>
+                                <option value="fiorino">Fiorino / utilitário</option>
+                                <option value="vuc">VUC</option>
+                                <option value="toco">Caminhão toco</option>
+                                <option value="truck">Caminhão truck</option>
+                                <option value="carreta">Carreta</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="anoVeiculo">Ano do veículo</label>
+                            <input class="campo" id="anoVeiculo" name="ano_veiculo" type="number" placeholder="2020" min="1980" max="2026">
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="marcaVeiculo">Marca</label>
+                            <input class="campo" id="marcaVeiculo" name="marca_veiculo" type="text" placeholder="Ex: Volkswagen" required>
+                        </div>
+                        <div class="field">
+                            <label for="modeloVeiculo">Modelo</label>
+                            <input class="campo" id="modeloVeiculo" name="modelo_veiculo" type="text" placeholder="Ex: Delivery 9.170" required>
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="capacidadeKg">Capacidade <span class="opcional">(kg)</span></label>
+                            <input class="campo" id="capacidadeKg" name="capacidade_kg" type="number" step="0.01" placeholder="0,00">
+                        </div>
+                        <div class="field">
+                            <label for="volumeM3">Volume <span class="opcional">(m³)</span></label>
+                            <input class="campo" id="volumeM3" name="volume_m3" type="number" step="0.01" placeholder="0,00">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="observacaoVeiculo">Observações do veículo <span class="opcional">(opcional)</span></label>
+                        <textarea class="campo campo--area" id="observacaoVeiculo" name="observacao_veiculo" placeholder="Ex: possui baú, carroceria aberta, etc."></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="fotoPerfil">Foto de perfil <span class="opcional">(opcional)</span></label>
+                        <input class="campo campo--file" id="fotoPerfil" name="foto_perfil" type="file" accept="image/*">
+                    </div>
+
+                    <div class="actions actions--split">
+                        <button type="button" class="buttonGhost" data-prev="1">Voltar</button>
+                        <button type="submit" class="buttonPrimary">Finalizar cadastro</button>
+                    </div>
+                </section>
+
+            </form>
+
+            <p class="login-link">Já tem uma conta? <a href="login.html">Entrar</a></p>
+        </div>
+    </div>
+
+    <script>
+        const panels = document.querySelectorAll('.panel');
+        const steps = document.querySelectorAll('.step');
+
+        function goToStep(n) {
+            panels.forEach(p => p.hidden = p.dataset.panel !== String(n));
+            steps.forEach(s => s.classList.toggle('is-active', s.dataset.stepLabel === String(n)));
+            document.querySelector('.card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        document.querySelectorAll('[data-next]').forEach(btn => {
+            btn.addEventListener('click', () => goToStep(btn.dataset.next));
+        });
+        document.querySelectorAll('[data-prev]').forEach(btn => {
+            btn.addEventListener('click', () => goToStep(btn.dataset.prev));
+        });
+
+        document.getElementById('formPrestador').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const senha = document.getElementById('senha').value;
+            const confirmar = document.getElementById('confirmarSenha').value;
+            if (senha !== confirmar) {
+                alert('As senhas não coincidem.');
+                goToStep(1);
+                return;
+            }
+            alert('Cadastro enviado! (conectar ao backend)');
+        });
+    </script>
+</body>
+</html>

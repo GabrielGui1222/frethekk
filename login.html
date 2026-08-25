@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login — Frethe.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="content first-content">
+
+            <div class="first-column">
+                <div class="pattern-dots"></div>
+                <svg class="truck-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="20" width="32" height="24" rx="2" stroke="white" stroke-width="2"/>
+                    <path d="M36 27H46.5C47.6 27 48.6 27.55 49.2 28.45L54 35.5C54.3 35.95 54.5 36.5 54.5 37V44H36V27Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="15" cy="47" r="4.5" stroke="white" stroke-width="2"/>
+                    <circle cx="44" cy="47" r="4.5" stroke="white" stroke-width="2"/>
+                </svg>
+
+                <a   href="selecao-perfil.html">
+                    <div class="first-column-inner">
+                    <h2 class="title title-primary">Entre na sua<br>conta agora!</h2>
+                    <p class="description description-primary">Ainda não tem conta?</p>
+                    <button id="signin" class="btn btn-primary">Criar Conta</button>
+                    </div>
+                </a>
+
+                <div class="route-track">
+                    <span class="dot"></span>
+                    <span class="line"></span>
+                    <span class="dot dot--end"></span>
+                </div>
+            </div>
+
+            <div class="second-column">
+                <div class="form-card">
+                    <h2 class="title title-second">Fre<span>the.</span></h2>
+                    <p class="description description-second">Preencha seus dados para continuar</p>
+
+                    <form class="form">
+                        <label class="label-input" for="emailcpf">
+                            <i class="far fa-envelope icon-modify"></i>
+                            <input id="emailcpf" type="text" placeholder="Email ou CPF">
+                        </label>
+
+                        <label class="label-input" for="senha">
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input id="senha" type="password" placeholder="Senha">
+                        </label>
+
+                        <button class="btn btn-second" type="submit">Entrar</button>
+                        <a class="description description-three" href="#">esqueci minha senha</a>
+                    </form>
+                </div>
+            </div><!-- second column -->
+
+        </div><!-- second-content -->
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: #F6F5F1;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 24px;
+}
+
+.content{
+    width: 100%;
+    max-width: 980px;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 40px 80px -30px rgba(0,0,0,0.22);
+}
+
+/* ------- COLUNA LARANJA ------- */
+.first-column{
+    position: relative;
+    background: linear-gradient(160deg, rgb(255,123,45) 0%, rgb(255,99,11) 55%, rgb(230,84,0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 56px;
+    overflow: hidden;
+}
+
+.pattern-dots{
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.16) 1.6px, transparent 1.6px);
+    background-size: 22px 22px;
+    opacity: .7;
+    pointer-events: none;
+}
+
+.truck-mark{
+    position: absolute;
+    right: -18px;
+    bottom: -16px;
+    width: 160px;
+    height: 160px;
+    opacity: .14;
+    transform: rotate(-6deg);
+}
+
+.first-column-inner{
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.14);
+    padding: 6px 14px;
+    border-radius: 3rem;
+    margin-bottom: 22px;
+}
+
+.title-primary{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.22;
+    margin-bottom: 16px;
+}
+
+.description-primary{
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 26px;
+}
+
+.btn-primary{
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.8);
+    border-radius: 3rem;
+    padding: 14px 34px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    cursor: pointer;
+    transition: background .25s ease, color .25s ease, transform .2s ease;
+}
+
+.btn-primary:hover{
+    background: #fff;
+    color: rgb(255,99,11);
+    transform: translateY(-2px);
+}
+
+.route-track{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 48px;
+}
+
+.route-track .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.route-track .dot--end{
+    background: rgba(255,255,255,0.5);
+}
+
+.route-track .line{
+    flex: 1;
+    max-width: 90px;
+    height: 0;
+    border-top: 2px dashed rgba(255,255,255,0.5);
+}
+
+/* ------- COLUNA BRANCA / FORM ------- */
+.second-column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 48px;
+    background: #ffffff;
+}
+
+.form-card{
+    width: 100%;
+    max-width: 340px;
+}
+
+.title-second{
+    font-size: 34px;
+    font-weight: 900;
+    color: rgb(255,99,11);
+    margin-bottom: 6px;
+}
+
+.title-second span{
+    color: #000;
+}
+
+.description-second{
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b6b6b;
+    margin-bottom: 30px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.icon-modify{
+    position: absolute;
+    left: 18px;
+    font-size: 15px;
+    color: rgb(255,99,11);
+}
+
+.label-input input{
+    width: 100%;
+    height: 50px;
+    padding: 0 18px 0 46px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+    background: #fff;
+    border: 1.5px solid #E4E1D9;
+    border-radius: 12px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.label-input input::placeholder{
+    color: #B5B5B5;
+    font-weight: 400;
+}
+
+.label-input input:focus{
+    outline: none;
+    border-color: rgb(255,99,11);
+    box-shadow: 0 0 0 3px rgba(255,99,11,0.14);
+}
+
+.btn-second{
+    height: 52px;
+    margin-top: 6px;
+    background: rgb(255,99,11);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: background .3s ease, transform .2s ease;
+}
+
+.btn-second:hover{
+    background: #000;
+    transform: translateY(-2px);
+}
+
+.description-three{
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b6b6b;
+}
+
+.description-three:hover{
+    color: rgb(255,99,11);
+}
+
+/* ------- RESPONSIVO ------- */
+@media (max-width: 860px){
+    .content{
+        grid-template-columns: 1fr;
+        border-radius: 22px;
+    }
+    .first-column{
+        padding: 44px 36px;
+        min-height: 260px;
+    }
+    .title-primary{ font-size: 30px; }
+    .second-column{ padding: 40px 30px; }
+    .route-track{ display: none; }
+    .truck-mark{ width: 120px; height: 120px; }
+}
+
+@media (max-width: 420px){
+    .container{ padding: 0; }
+    .content{ border-radius: 0; min-height: 100vh; }
+}
