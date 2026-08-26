@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frethe. — O que você deseja fazer?</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/cadastrocli.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,100;1,400;1,500;1,600;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,900;1,400;1,900&display=swap" rel="stylesheet">
 <style>
 *{
@@ -21,6 +20,9 @@
 body{
     color: black;
     background: #FFFDFB;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* HEADER — igual ao index.html original */
@@ -77,13 +79,13 @@ header{
 /* MAIN */
 main{
     padding: 160px 14% 80px;
-    min-height: 100vh;
+    flex: 1;
     display: flex;
     align-items: center;
 }
 .stage{
     width: 100%;
-    max-width: 640px;
+    max-width: 900px;
 }
 .eyebrow{
     display: inline-block;
@@ -120,20 +122,25 @@ h1 span{
 .route{
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 22px;
 }
 .route::before{
     content: '';
     position: absolute;
-    left: 34px;
-    top: 48px;
-    bottom: 48px;
-    border-left: 3px dashed rgba(255,99,11,0.35);
+    top: 50%;
+    left: 48px;
+    right: 48px;
+    height: 3px;
+    border-top: 3px dashed rgba(255,99,11,0.35);
+    z-index: -1;
 }
 
 .card{
     position: relative;
+    flex: 1 1 380px;
     display: flex;
     align-items: center;
     gap: 22px;

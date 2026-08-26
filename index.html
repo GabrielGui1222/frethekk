@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frethe.</title>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,100;1,400;1,500;1,600;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,900;1,400;1,900&display=swap" rel="stylesheet">
@@ -15,9 +15,9 @@
         <a href="index.html" class="logo">Fre<span>the.</span></a>
         
         <nav class="navlist">
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Fretes</a></li>
-            <li><a href="#">Fale conosco</a></li>
+            <a href="#">Quem somos</a>
+            <a href="#">Fretes</a>
+            <a href="#">Fale conosco</a>
         </nav>
         <nav class="buttonLg">
             <a href="login.html">Entrar</a>
@@ -25,15 +25,73 @@
         <div class="buttonCadastro">Não possui cadastro?<br><a href="selecao-perfil.html">cadastrar-se</a></div>
     </header>
 
-    <section class="home">
-        <div class="home-txt">
-            <h1><strong>Sua plataforma </strong><span><br>de fretes em</span><br><strong>Teresina</strong></h1>
+    <!-- HERO -->
+    <section class="hero-banner">
+    <div class="hero-banner-img">
+        <img src="img/Gemini_Generated_Image_oq6uk0oq6uk0oq6u.jpg" alt="Motorista parceiro Frethe">
+    </div>
+    <div class="hero-banner-txt">
+        <h1><strong>Sua plataforma </strong><span>de fretes em</span> <strong>Teresina</strong></h1>
+    </div>
+</section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="howworks">
+        <span class="eyebrow-center">Simples assim</span>
+        <h2 class="howworks-title">Como funciona</h2>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <img src="img/Order ride-cuate.svg" alt="Pesquisar motoristas">
+                <h3>Pesquise motoristas</h3>
+                <p>Veja os motoristas disponíveis em Teresina, com foto, avaliação e tipo de veículo.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <img src="img/Fast loading-bro.svg" alt="Escolher e contatar">
+                <h3>Escolha e chame no WhatsApp</h3>
+                <p>Encontrou o motorista ideal? Clique em "Solicitar frete" e fale direto com ele.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <img src="img/Free shipping-amico.svg" alt="Frete concluído">
+                <h3>Combine e receba seu frete</h3>
+                <p>Negocie valores e horários diretamente com o motorista, sem burocracia.</p>
+            </div>
         </div>
-        <div class="home-img">
-            <img src="img/Heavy box-amico.svg">
-        </div>
-            
     </section>
+
+    <!-- TIPOS DE VEÍCULO -->
+    <section class="vehicles">
+        <span class="eyebrow-center">Para todo tipo de carga</span>
+        <h2 class="howworks-title">Tipos de veículo disponíveis</h2>
+
+        <div class="vehicles-grid">
+            <div class="vehicle-chip">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="14" height="10" rx="1.2" stroke="rgb(255,99,11)" stroke-width="1.6"/><path d="M16 10h3.3c.4 0 .8.22.95.56L21.5 13.3c.1.17.15.36.15.56V17H16v-7Z" stroke="rgb(255,99,11)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.5" cy="18.3" r="1.8" stroke="rgb(255,99,11)" stroke-width="1.6"/><circle cx="17.5" cy="18.3" r="1.8" stroke="rgb(255,99,11)" stroke-width="1.6"/></svg>
+                <span>Fiorino</span>
+            </div>
+            <div class="vehicle-chip">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="1.5" y="6" width="16" height="11" rx="1.2" stroke="rgb(255,99,11)" stroke-width="1.6"/><path d="M17.5 9h3c.5 0 .95.28 1.18.72L23 12.4c.1.2.16.42.16.65V17h-5.66V9Z" stroke="rgb(255,99,11)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.5" cy="18.3" r="1.8" stroke="rgb(255,99,11)" stroke-width="1.6"/><circle cx="19" cy="18.3" r="1.8" stroke="rgb(255,99,11)" stroke-width="1.6"/></svg>
+                <span>VUC</span>
+            </div>
+            <div class="vehicle-chip">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="1" y="5" width="18" height="11" rx="1.2" stroke="rgb(255,99,11)" stroke-width="1.6"/><path d="M19 8h2.5c.5 0 .95.28 1.18.72L23.5 11.4c.1.2.16.42.16.65V16H19V8Z" stroke="rgb(255,99,11)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6" cy="17.3" r="1.9" stroke="rgb(255,99,11)" stroke-width="1.6"/><circle cx="19" cy="17.3" r="1.9" stroke="rgb(255,99,11)" stroke-width="1.6"/></svg>
+                <span>Toco</span>
+            </div>
+            <div class="vehicle-chip">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="0.5" y="5" width="17" height="11" rx="1.2" stroke="rgb(255,99,11)" stroke-width="1.6"/><path d="M17.5 7h3c.5 0 .95.28 1.18.72L23.4 10.4c.1.2.16.42.16.65V16H17.5V7Z" stroke="rgb(255,99,11)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="5.5" cy="17.3" r="1.9" stroke="rgb(255,99,11)" stroke-width="1.6"/><circle cx="14" cy="17.3" r="1.9" stroke="rgb(255,99,11)" stroke-width="1.6"/><circle cx="20.5" cy="17.3" r="1.9" stroke="rgb(255,99,11)" stroke-width="1.6"/></svg>
+                <span>Truck</span>
+            </div>
+            <div class="vehicle-chip">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="0.5" y="6" width="10" height="10" rx="1" stroke="rgb(255,99,11)" stroke-width="1.6"/><rect x="11" y="8" width="12.5" height="8" rx="1" stroke="rgb(255,99,11)" stroke-width="1.6"/><circle cx="4.5" cy="17.3" r="1.8" stroke="rgb(255,99,11)" stroke-width="1.6"/><circle cx="14.5" cy="17.3" r="1.8" stroke="rgb(255,99,11)" stroke-width="1.6"/><circle cx="21" cy="17.3" r="1.8" stroke="rgb(255,99,11)" stroke-width="1.6"/></svg>
+                <span>Carreta</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- O QUE FAZEMOS (existente) -->
     <section class="home2">
         <div class="home2-txt">
             <h1>O que fazemos?</h1><br><br>
@@ -48,22 +106,38 @@
             <h3>Entrega super<br><span>rápida e segura</span></h3>
         </div>
     </section>
-    <section class="home3">
 
-    </section>
-    </main>
-     <section class="cta">
-        <div class="cta-content">
-            <h1>Pronto para <span>enviar sua carga?</span></h1>
-            <p>Encontre motoristas confiáveis em Teresina em poucos minutos.</p>
-            <a href="selecao-perfil.html" class="buttonCta">Solicitar Frete agora</a>
+    <!-- NÚMEROS / CONFIANÇA -->
+    <section class="stats">
+        <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Motoristas cadastrados</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Tipos de veículo</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Gratuito para clientes</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">Teresina</span>
+            <span class="stat-label">Atendimento local</span>
         </div>
     </section>
 
-    <footer>
-    Precisa de ajuda? <a href="#">Fale conosco</a>
-    </footer>
-    <script src="js/scripts.js"></script>
+    <!-- CTA FINAL -->
+    <section class="cta">
+        <div class="cta-img">
+            <img src="img/Vintage truck-bro.svg">
+        </div>
+        <div class="cta-content">
+            <h1>Pronto para <span>encontrar</span> seu motorista?</h1>
+            <p>Cadastre-se gratuitamente e comece a usar o Frethe agora mesmo.</p>
+            <a href="selecao-perfil.html" class="buttonCta">Criar minha conta</a>
+        </div>
+    </section>
 
 </body>
-</html>
+</html> 

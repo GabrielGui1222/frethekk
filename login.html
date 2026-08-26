@@ -8,7 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
+    
+    
+    <link rel="stylesheet" href="css/login.css">
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
@@ -25,11 +28,12 @@
                     <circle cx="44" cy="47" r="4.5" stroke="white" stroke-width="2"/>
                 </svg>
 
-                <a   href="selecao-perfil.html">
+                
+                <a href="selecao-perfil.html">
                     <div class="first-column-inner">
                     <h2 class="title title-primary">Entre na sua<br>conta agora!</h2>
                     <p class="description description-primary">Ainda não tem conta?</p>
-                    <button id="signin" class="btn btn-primary">Criar Conta</button>
+                    <button id="signin" class="btn btn-primary" type="button">Criar Conta</button>
                     </div>
                 </a>
 
@@ -45,15 +49,18 @@
                     <h2 class="title title-second">Fre<span>the.</span></h2>
                     <p class="description description-second">Preencha seus dados para continuar</p>
 
-                    <form class="form">
+                    
+                    <form class="form" id="formLogin">
                         <label class="label-input" for="emailcpf">
                             <i class="far fa-envelope icon-modify"></i>
-                            <input id="emailcpf" type="text" placeholder="Email ou CPF">
+                            <!-- Atributo name="email" adicionado -->
+                            <input id="emailcpf" name="email" type="text" placeholder="Email ou CPF" required>
                         </label>
 
                         <label class="label-input" for="senha">
                             <i class="fas fa-lock icon-modify"></i>
-                            <input id="senha" type="password" placeholder="Senha">
+                            <!-- Atributo name="senha" adicionado -->
+                            <input id="senha" name="senha" type="password" placeholder="Senha" required>
                         </label>
 
                         <button class="btn btn-second" type="submit">Entrar</button>
@@ -64,6 +71,14 @@
 
         </div><!-- second-content -->
     </div>
-    <script src="js/app.js"></script>
+
+    <script>
+        // Site estático (GitHub Pages) — sem backend. Este redirecionamento é só uma demonstração
+        // do fluxo; troque pela chamada real à sua API quando o back-end estiver publicado.
+        document.getElementById('formLogin').addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.location.href = 'painel-cliente.html';
+        });
+    </script>
 </body>
 </html>

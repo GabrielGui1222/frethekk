@@ -5,15 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frethe. — Painel do Cliente</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,100;1,400;1,500;1,600;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,900;1,400;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="painel-cliente1.css">
+<link rel="stylesheet" href="css/painel-cliente1.css">
 </head>
 <body>
 
 <header>
-    <a href="painel-cliente.html" class="logo">Fre<span>the.</span></a>
+    <a href="index.html" class="logo">Fre<span>the.</span></a>
     <div class="header-right">
         <nav class="navlist">
             <a href="#" class="active">Painel</a>
@@ -59,10 +57,10 @@
                         Verificado
                     </span>
                     <div class="gallery">
-                        <img src="testecaminhao.png" alt="Caminhão de Carlos Mendes — foto 1" class="slide">
-                        <img src="testecaminhao.png" alt="Caminhão de Carlos Mendes — foto 1" class="slide">
-                        <img src="testecaminhao.png" alt="Caminhão de Carlos Mendes — foto 2" class="slide">
-                        <img src="img/caminhao-carlos.jpg" alt="Caminhão de Carlos Mendes — foto 3" class="slide">
+                        <img src="img/testecaminhao.png" alt="Caminhão de Carlos Mendes — foto 1" class="slide">
+                        <img src="img/testecaminhao.png" alt="Caminhão de Carlos Mendes — foto 1" class="slide">
+                        <img src="img/testecaminhao.png" alt="Caminhão de Carlos Mendes — foto 2" class="slide">
+                        <img src="img/testecaminhao.png" alt="Caminhão de Carlos Mendes — foto 3" class="slide">
                     </div>
                     <div class="gallery-dots"></div>
                 </div>
@@ -119,7 +117,8 @@
                             (86) 99123-4455
                         </span>
                     </div>
-                    <button class="buttonSolicitar">Solicitar frete</button>
+                    <a href="https://wa.me/558698036319?text=Oi%21%20Vim%20pelo%20Frethe.%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20frete.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F">
+                    <button class="buttonSolicitar">Solicitar frete</button></a>
                 </div>
             </article>
 
@@ -127,12 +126,13 @@
     </section>
 
     <!-- PAINEL: MINHAS SOLICITAÇÕES -->
-    <section class="panel" data-panel="solicitacoes" hidden>
-        <div class="empty">
+    <!-- PAINEL: MINHAS SOLICITAÇÕES -->
+<section class="panel" data-panel="solicitacoes" hidden>
+    <div class="empty">
             <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             <p>Você ainda não fez nenhuma solicitação de frete. Escolha um motorista na aba "Veículos disponíveis" para começar.</p>
         </div>
-    </section>
+</section>
 </main>
 
 <script>
